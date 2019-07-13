@@ -7,7 +7,7 @@ def hello_world(request):
         Response object using
         `make_response <http://flask.pocoo.org/docs/1.0/api/#flask.Flask.make_response>`.
     """
-	resp = "hi"
+    resp = "hi"
     request_json = request.get_json()
     if request.args and 'message' in request.args:
         resp = request.args.get('message') + " sup"
