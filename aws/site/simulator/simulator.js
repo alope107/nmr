@@ -11,7 +11,7 @@ function init() {
     Kd_slider = document.getElementById("Kd");
     koff_slider = document.getElementById("koff");
     dR2_slider = document.getElementById("dR2");
-    mw_slider = document.getElementById("mw");
+    //mw_slider = document.getElementById("mw");
     lw_slider = document.getElementById("lw");
     larmor_slider = document.getElementById("larmor");
     delta_w_slider = document.getElementById("delta_w");
@@ -20,7 +20,7 @@ function init() {
     Kd_label = document.getElementById("Kd_label");
     koff_label = document.getElementById("koff_label");
     dR2_label = document.getElementById("dR2_label");
-    mw_label = document.getElementById("mw_label");
+    //mw_label = document.getElementById("mw_label");
     lw_label = document.getElementById("lw_label");
     larmor_label = document.getElementById("larmor_label");
     delta_w_label = document.getElementById("delta_w_label");
@@ -57,7 +57,7 @@ function update() {
     Kd_label.innerHTML = Kd_slider.value;
     koff_label.innerHTML = koff_slider.value;
     dR2_label.innerHTML = dR2_slider.value;
-    mw_label.innerHTML = mw_slider.value;
+    //mw_label.innerHTML = mw_slider.value;
     lw_label.innerHTML = lw_slider.value;
     larmor_label.innerHTML = larmor_slider.value;
     delta_w_label.innerHTML = delta_w_slider.value;
@@ -68,7 +68,7 @@ function update() {
                         Number(Kd_slider.value),
                         Number(koff_slider.value),
                         Number(dR2_slider.value),
-                        Number(mw_slider.value),
+                        20,//Number(mw_slider.value),
                         Number(lw_slider.value),
                         Number(larmor_slider.value),
                         Number(delta_w_slider.value));
@@ -86,7 +86,6 @@ function norm_cauchy(x,x0,fwhm) {
 }
 
 function y_vals(A, B, Kd, koff, dR2, mw, lw, sw, larmor, delta_w) {
-    console.log(A,  B, Kd, koff, dR2, mw, lw, larmor, delta_w);
   AB = ( (A + B + Kd) - Math.sqrt( Math.pow((A + B + Kd), 2) - 4*A*B ) ) / 2
   pb = AB/A
   pa = 1 - pb
@@ -127,7 +126,6 @@ function gen_data(Bs, A, Kd, koff, dR2, mw, lw, larmor, delta_w) {
             delta_w);
         res.push(...vals);
     }
-    console.log(res);
     return res;
 }
 
