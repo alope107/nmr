@@ -1,0 +1,45 @@
+<head>
+    <!-- Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="./simulator.js"></script>
+
+    <!-- Bootstrap core CSS -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body onload="init()">
+    <div class = "container">
+        <div class = "row">
+            <div class="col-lg-4">
+                <div style="white-space: nowrap;">
+                    &nbsp;Larmor&nbsp;
+                    <input id ="larmor" type="range" min="0" max="1000" value="500" oninput="update()">
+                    &nbsp;<span id="larmor_label"></span>&nbsp;
+                </div>
+                <div style="white-space: nowrap;">
+                    &nbsp;delta_w&nbsp;
+                    <input id ="delta_w" type="range" min="0" max="500" value="100" oninput="update()">
+                    &nbsp;<span id="delta_w_label"></span>&nbsp;
+                </div>
+            </div>
+            <div id="holder" class="col-lg-8">
+                <div id="tester"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+  <!--
+      <div class = "row">
+                    <div class = "col-md-auto">
+                    Larmor
+                    </div>
+                    <div class = "col-md-auto">
+                    <input id ="larmor" type="range" class="form-control-range" min="0" max="1000" value="500" oninput="update()">
+                </div>
+                <div class = "col-md-auto">
+                    <span id="larmor_label"></span>
+                </div>
+                </div>
+  -->
+  
