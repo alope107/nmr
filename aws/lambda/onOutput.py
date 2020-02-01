@@ -121,7 +121,7 @@ def send_email(to_addr, subj, body):
     )
 
 def email_body(link):
-    return "The results of your MaLICE run can be downloaded here: " + link
+    return "The results of your CompLEx run can be downloaded here: " + link
 
 # Uploads the results of the MaLICE run to a public drive link.
 # Emails the user who requested the run a link to the file.
@@ -129,4 +129,5 @@ def distribute_results(bucket, key):
     fid = get_file_id(key)
     user_email = fetch_email(fid)
     uploaded = fetch_and_upload(bucket, key)
-    send_email(user_email, "MaLICE Results", email_body(uploaded["link"]))
+    send_email(user_email, "CompLEx Results", email_body(uploaded["link"]))
+    

@@ -46,15 +46,17 @@ def start_job(bucket, key):
     #         'memory': 1024,
     #         'command': [
     #             uri,
-    #             "--pop_size", "5",
-    #             "--pop_iter", "1",
-    #             "--evo_max_iter", "10",
-    #             "--least_squares_max_iter", "1",
-    #             "--thread_count", "1",
-    #             "--bootstraps", "2",
+    #             "--phase1_islands", "2",
+    #             "--phase1_generations", "10",
+    #             "--phase1_evo_rounds", "1",
+    #             "--phase2_islands", "2", 
+    #             "--phase2_generations", "10",
+    #             "--phase2_evo_rounds", "1",
+    #             "--least_squares_max_iter", "10",
+    #             "--mcmc_walks", "10", 
+    #             "--mcmc_steps", "20",
     #             "--s3_prefix", s3_prefix,
-    #             "--output_dir", file_id,
-    #             "--deterministic"],
+    #             "--output_dir", file_id],
     #     },
     #     retryStrategy={
     #         'attempts': 1
@@ -69,13 +71,12 @@ def start_job(bucket, key):
         jobDefinition='Malice-real:2',
         containerOverrides={
             'vcpus': 15,
-            'memory': 4096,
+            'memory': 8192,
             'command': [
                 uri,
-                "--thread_count", "10",
+                "--num_threads", "10",
                 "--s3_prefix", s3_prefix,
-                "--output_dir", file_id,
-                "--deterministic"],
+                "--output_dir", file_id],
         },
         retryStrategy={
             'attempts': 1

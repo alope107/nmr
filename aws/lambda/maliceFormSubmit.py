@@ -94,8 +94,8 @@ def lambda_handler(event, context):
     upload_to_s3(f, BUCKET, file_id)
     set_email(file_id, email)
     send_email(email, 
-        "Malice Results", 
-        "Your MaLICE data has been accepted and a run will begin soon")
+        "CompLEx Submission", 
+        "Your NMR data has been accepted and a CompLEx run will begin soon")
     return {
         'statusCode': 200,
         'body': json.dumps('All good~')
