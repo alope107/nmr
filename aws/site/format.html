@@ -1,0 +1,85 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>CompLEx-NMR</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/4524f52b14.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <div class="jumbotron">
+      <div class="container">
+        <h1>CompLEx-NMR Data Format</h1>
+        
+      </div>
+    </div>
+    <div class="container">
+        <div class="col-md-12">
+            <div class="row">
+                <h3 class="mt-1">Headings</h3>  
+            </div>
+            <div class="row">
+                <p>
+                    To be properly processed, your data must be in a CSV file. It requires the following headings:
+                </p>
+            </div>
+            <div class="row bg-light">
+                <code>residue,15N,1H,intensity,titrant,visible</code>
+            </div>
+            <div class="row">
+                <h3 class="mt-1">Example File</h3> 
+            </div>
+            <div class="row">
+                <textarea readonly cols=40 rows=20>
+residue,15N,1H,intensity,titrant,visible
+6,124.567,7.763,3248421.0,0.0,150.0
+7,126.776,8.349,5053537.0,0.0,150.0
+9,121.124,8.202,2062229.0,0.0,150.0
+6,124.565,7.763,3191240.0,7.9,150.0
+7,126.777,8.349,4964073.0,7.9,150.0
+9,121.125,8.201,2136456.0,7.9,150.0
+6,124.565,7.765,2912778.0,15.6,150.0
+7,126.777,8.352,4829527.0,15.6,150.0
+9,121.14,8.203,2222746.0,15.6,150.0
+6,124.548,7.766,2345021.0,30.4,150.0
+7,126.773,8.352,4560939.0,30.4,150.0
+9,121.149,8.204,2178303.0,30.4,150.0
+6,124.542,7.771,1993161.0,45.6,150.0
+7,126.775,8.356,4322455.0,45.6,150.0
+9,121.154,8.206,1940769.0,45.6,150.0
+6,124.522,7.778,1330752.0,75.7,150.0
+7,126.766,8.359,3747151.0,75.7,150.0
+9,121.169,8.205,1781608.0,75.7,150.0
+6,124.455,7.789,1090097.0,105.5,150.0
+7,126.765,8.363,3478104.0,105.5,150.0
+9,121.173,8.21,1928253.0,105.5,150.0
+6,124.451,7.796,748839.0,135.5,150.0
+7,126.752,8.365,3154153.0,135.5,150.0
+9,121.214,8.21,1717301.0,135.5,150.0
+6,124.344,7.805,602983.0,150.0,150.0
+7,126.754,8.37,3276547.0,150.0,150.0
+9,121.236,8.218,1670265.0,150.0,150.0
+                </textarea>
+            </div>
+        </div>
+    </div>
+      <hr>
+
+      <footer>
+      </footer>
+    </div> 
+
+    </body>
+</html>
